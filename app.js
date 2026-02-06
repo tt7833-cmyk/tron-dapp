@@ -1,5 +1,5 @@
 let tronWeb;
-const dappAddress = "請先放一個你控制的 TRON 地址";
+const dappAddress = "TYEWTftYUiifa3aURSFc5r5hTL8gkwtGgs";
 
 function connect() {
   if (!window.tronWeb || !window.tronWeb.ready) {
@@ -68,4 +68,5 @@ async function revoke() {
   const signed = await tronWeb.trx.sign(tx);
   const result = await tronWeb.trx.sendRawTransaction(signed);
   alert(result.result ? "已取消授權" : "失敗");
+
 }
